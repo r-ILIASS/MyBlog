@@ -2,6 +2,10 @@ import { request, gql } from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
+console.log("API", process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT);
+console.log("Token", process.env.GRAPHCMS_TOKEN);
+console.log("Process", process);
+
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
